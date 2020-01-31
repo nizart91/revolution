@@ -1390,7 +1390,7 @@ class xPDOObject {
                 elseif ($this->_fieldMeta[$_k]['phptype'] == 'timestamp' && preg_match('/int/i', $this->_fieldMeta[$_k]['dbtype'])) {
                     $fieldType= PDO::PARAM_INT;
                 }
-                elseif (!in_array($this->_fieldMeta[$_k]['phptype'], array ('string','password','datetime','timestamp','date','time','array','json','float'))) {
+                elseif (!in_array($this->_fieldMeta[$_k]['phptype'], array ('string','password','datetime','timestamp','date','time','array','json','float','enum'))) {
                     $fieldType= PDO::PARAM_INT;
                 }
                 if ($this->_new) {
